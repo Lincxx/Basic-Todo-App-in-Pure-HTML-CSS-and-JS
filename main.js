@@ -17,6 +17,12 @@ newBtn.addEventListener('click', () => {
 });
 
 
+newText.addEventListener("keyup", event => {
+    if (event.key.toLowerCase() === 'enter'){
+        newBtn.click();
+    }
+});
+
 const move = (element, destination) => {
     if (element.localName === 'li') {
         destination.appendChild(element);
